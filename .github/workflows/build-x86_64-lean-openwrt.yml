@@ -18,7 +18,7 @@ on:
 #    types: started
 
 env:
-  REPO_URL: https://github.com/Lienol/openwrt
+  REPO_URL: https://github.com/coolsnowwolf/led
   REPO_BRANCH: master
   CONFIG_FILE: config/lean/x86/x86_64-lean-target.config
   DIY_SH: scripts/lean-openwrt.sh

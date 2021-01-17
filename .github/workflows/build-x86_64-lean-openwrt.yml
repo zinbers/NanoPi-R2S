@@ -13,12 +13,12 @@ on:
     types: [lean, x86_64]
   workflow_dispatch:
   schedule:
-    - cron: 38 17 * * *
+    - cron: 0 18 * * *
 #  watch:
 #    types: started
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/led
+  REPO_URL: https://github.com/Lienol/openwrt
   REPO_BRANCH: master
   CONFIG_FILE: config/lean/x86/x86_64-lean-target.config
   DIY_SH: scripts/lean-openwrt.sh

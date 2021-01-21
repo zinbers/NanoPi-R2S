@@ -4,7 +4,7 @@ name: CI
 
 # Controls when the action will run. 
 on:
-  name: Build NanoPi R2S Lean's OpenWrt
+  name: NanoPi R2S Lean OpenWrt
 
 on:
   repository_dispatch:

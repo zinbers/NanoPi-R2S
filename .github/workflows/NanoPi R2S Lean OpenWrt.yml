@@ -1,6 +1,4 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI
+name: NanoPi R2S Lean OpenWrt
 
 # Controls when the action will run. 
 on:

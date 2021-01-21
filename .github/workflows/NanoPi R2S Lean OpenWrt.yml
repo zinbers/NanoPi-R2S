@@ -1,6 +1,5 @@
-name: NanoPi R2S Lean OpenWrt
+name:NanoPi R2S Lean OpenWrt
 
-# Controls when the action will run. 
 on:
   name: NanoPi R2S Lean OpenWrt
 

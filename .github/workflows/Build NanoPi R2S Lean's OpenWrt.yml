@@ -1,7 +1,12 @@
-name:NanoPi R2S Lean OpenWrt
+#=================================================
+# https://github.com/P3TERX/Actions-OpenWrt
+# Description: Build OpenWrt using GitHub Actions
+# Lisence: MIT
+# Author: P3TERX
+# Blog: https://p3terx.com
+#=================================================
 
-on:
-  name: NanoPi R2S Lean OpenWrt
+name: Build NanoPi R2S Lean's OpenWrt
 
 on:
   repository_dispatch:
@@ -243,3 +248,4 @@ jobs:
         with:
           name: |
             bin-archive
+

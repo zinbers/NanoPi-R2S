@@ -86,6 +86,14 @@ git clone --depth=1 https://github.com/zcy85611/openwrt-luci-kcp-udp
 git clone --depth=1 https://github.com/destan19/OpenAppFilter
 popd
 
+# Add luci-app-oled (R2S Only)
+git clone --depth=1 https://github.com/NateLol/luci-app-oled
+
+# Add driver for rtl8821cu & rtl8812au-ac
+svn co https://github.com/project-openwrt/openwrt/branches/master/package/ctcgfw/rtl8812au-ac
+svn co https://github.com/project-openwrt/openwrt/branches/master/package/ctcgfw/rtl8821cu
+popd
+
 # Mod zzz-default-settings
 pushd package/lean/default-settings/files
 sed -i '/http/d' zzz-default-settings

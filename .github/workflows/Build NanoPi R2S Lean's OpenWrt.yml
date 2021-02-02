@@ -32,7 +32,8 @@ env:
 
 jobs:
   Build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
+    if: github.repository == 'MedyMa/R2S-2021'
 
     outputs:
       OPENWRTROOT: ${{ steps.update.outputs.OPENWRTROOT }}
@@ -171,7 +172,8 @@ jobs:
         
   Upload:
     needs: [Build]
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
+    if: github.repository == 'MedyMa/R2S-2021'
 
     steps:
       - name: Checkout

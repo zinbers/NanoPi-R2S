@@ -83,8 +83,8 @@ svn co https://github.comimmortalwrt/immortalwrt/trunk/package/ntlf9t/luci-app-s
 git clone --depth=1 https://github.com/zcy85611/openwrt-luci-kcp-udp
 
 # Add OpenAppFilter
-# git clone --depth=1 https://github.com/destan19/OpenAppFilter
-# popd
+git clone --depth=1 https://github.com/destan19/OpenAppFilter
+popd
 
 # Add Pandownload
 svn co https://github.com/immortalwrt/immortalwrt/branches/master/package/lean/pandownload-fake-server package/lean/pandownload-fake-server

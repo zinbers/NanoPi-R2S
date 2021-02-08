@@ -95,7 +95,9 @@ git clone --depth=1 https://github.com/destan19/OpenAppFilter
 popd
 
 # Add Pandownload
-svn co https://github.com/immortalwrt/immortalwrt/branches/master/package/lean/pandownload-fake-server
+pushd package/lean
+svn co https://github.com/immortalwrt/immortalwrt/trunk/package/lean/pandownload-fake-server
+popd
 
 # Add luci-app-oled (R2S Only)
 git clone --depth=1 https://github.com/NateLol/luci-app-oled

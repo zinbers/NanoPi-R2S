@@ -20,7 +20,7 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  CONFIG_FILE: config/lean/rockchip/r2s-lean-openwrt.config
+  CONFIG_FILE: config/lean/rockchip/lean.config
   DIY_SH: scripts/lean-openwrt.sh
   IPV6MOD_IN_FIRMWARE: true
   KMODS_IN_FIRMWARE: true
@@ -103,6 +103,8 @@ jobs:
             echo "CONFIG_ALL_KMODS=y" >> .config
         fi
         make defconfig
+        ../scripts/modify_config.sh
+        cat .config
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;

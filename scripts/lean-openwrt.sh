@@ -46,7 +46,7 @@ git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
 
 # Add luci-app-adguardhome
 svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome
-svn co https://github.com/Lienol/openwrt/trunk/package/diy/adguardhome
+svn co https://github.com/openwrt/packages/trunk/net/adguardhome
 
 # Add luci-app-diskman
 git clone --depth=1 https://github.com/SuLingGG/luci-app-diskman
@@ -106,6 +106,11 @@ popd
 pushd package/lean
 svn co https://github.com/immortalwrt/immortalwrt/branches/master/package/ctcgfw/rtl8812au-ac
 svn co https://github.com/immortalwrt/immortalwrt/branches/master/package/ctcgfw/rtl8821cu
+popd
+
+#Add penwrt-feeds-driver-ext
+pushd package/lean
+git clone —depth=1 https://github.com/drwatson32/openwrt-feeds-driver-ext
 popd
 
 # Mod zzz-default-settings

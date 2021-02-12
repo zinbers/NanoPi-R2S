@@ -123,7 +123,7 @@ popd
 # Fix libssh
 pushd feeds/packages/libs
 rm -rf libssh
-svn co https://github.com/coolsnowwolf/packages/trunk/libs/libssh
+svn co https://github.com/openwrt/packages/trunk/libs/libssh
 popd
 
 # Use Lienol's https-dns-proxy package
@@ -135,7 +135,7 @@ popd
 # Use snapshots syncthing package
 pushd feeds/packages/utils
 rm -rf syncthing
-svn co https://github.com/coolsnowwolf/packages/trunk/utils/syncthing
+svn co https://github.com/openwrt/packages/trunk/utils/syncthing
 popd
 
 # Fix mt76 wireless driver

@@ -90,6 +90,9 @@ svn co https://github.com/immortalwrt/immortalwrt/trunk/package/ntlf9t/luci-app-
 # Add luci-udptools
 git clone --depth=1 https://github.com/zcy85611/openwrt-luci-kcp-udp
 
+# Add luci-app-wireguard
+svn co https://github.com/openwrt/luci/trunk/applications/luci-app-wireguard
+
 # Add luci-app-oled (R2S Only)
 git clone --depth=1 https://github.com/NateLol/luci-app-oled
 

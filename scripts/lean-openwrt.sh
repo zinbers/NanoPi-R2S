@@ -105,6 +105,11 @@ pushd package/network/services
 git clone --depth=1 https://github.com/linkease/ddnsto-openwrt
 popd
 
+#Add luci-app-linkease
+pushd package/network/services
+git clone --depth=1 https://github.com/linkease/linkease-openwrt
+popd
+
 # Add Pandownload
 pushd package/lean
 svn co https://github.com/immortalwrt/immortalwrt/trunk/package/lean/pandownload-fake-server

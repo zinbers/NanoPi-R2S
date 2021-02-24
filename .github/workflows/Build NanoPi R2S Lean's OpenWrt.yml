@@ -26,7 +26,8 @@ env:
   KMODS_IN_FIRMWARE: true
  #UPLOAD_RCLONE: true
   UPLOAD_WETRANSFER: true
-  UPLOAD_COWTRANSFER: true
+ #UPLOAD_COWTRANSFER: true
+  UPLOAD_WSS: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
 
@@ -240,19 +241,28 @@ jobs:
           df -hT $PWD
           echo "::set-output name=ORGANIZE_STATUS::success"
 
-      - name: Upload Firmware To CowTransfer
-        if: steps.organize.outputs.ORGANIZE_STATUS == 'success' && env.UPLOAD_COWTRANSFER == 'true'
+     # - name: Upload Firmware To CowTransfer
+     #   if: steps.organize.outputs.ORGANIZE_STATUS == 'success' && env.UPLOAD_COWTRANSFER == 'true'
+     #   run: |
+     #     cd $OPENWRTROOT/bin/targets/$TARGET/
+     #     ./transfer cow --block 2621440 -s -p 64 --no-progress ${FIRMWARE} 2>&1 | tee cowtransfer.log
+     #     echo "::warning file=Firmware-Cowtransfer.com::$(cat cowtransfer.log | grep https)"
+      - name: Upload Firmware To Wss
+        id: wss
+        if: steps.organize.outputs.ORGANIZE_STATUS == 'success' && env.UPLOAD_WSS == 'true'
         run: |
           cd $OPENWRTROOT/bin/targets/$TARGET/
-          ./transfer cow --block 2621440 -s -p 64 --no-progress ${FIRMWARE} 2>&1 | tee cowtransfer.log
-          echo "::warning file=Firmware-Cowtransfer.com::$(cat cowtransfer.log | grep https)"
-
+          ./transfer wss --block 2621444 -s -p 64 --no-progress ${FIRMWARE} 2>&1 | tee wss.log
+          echo "::warning file=Firmware-Wenshushu.cn::$(cat wss.log | grep https)"
+          echo "::set-output name=url::$(cat wss.log | grep https | cut -f3 -d" ")"
+          
       - name: Upload Firmware To WeTransfer
         if: steps.organize.outputs.ORGANIZE_STATUS == 'success' && env.UPLOAD_WETRANSFER == 'true'
         run: |
           cd $OPENWRTROOT/bin/targets/$TARGET/
           ./transfer wet -s -p 16 --no-progress ${FIRMWARE} 2>&1 | tee wetransfer.log
           echo "::warning file=Firmware-Wetransfer.com::$(cat wetransfer.log | grep https)"
+          echo "::set-output name=url::$(cat wetransfer.log | grep https | cut -f3 -d" ")"
           
       - name: Generate release tag
         id: tag

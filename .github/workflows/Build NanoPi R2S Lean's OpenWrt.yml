@@ -214,21 +214,21 @@ jobs:
           zip -qrm packages-server.zip packages-server
           mv packages-server.zip $OPENWRTROOT/bin/targets/$TARGET/$SUBTARGET
 
-      #- name: Rclone Upload
-      #  env:
-      #    RCLONE_PACKAGE: ${{ secrets.RCLONE_PACKAGE }}
-      #    RCLONE_FIRMWARE: ${{ secrets.RCLONE_FIRMWARE }}
-      #  if: env.GENERATE_STATUS == 'success' && env.UPLOAD_RCLONE == 'true' && env.RCLONE_PACKAGE != ''
-      #  run: |
-      #    cd $OPENWRTROOT
-      #    curl https://rclone.org/install.sh | sudo bash
-      #    mkdir -p ~/.config/rclone/
-      #    cat << EOF > ~/.config/rclone/rclone.conf
-      #    ${{ secrets.RCLONE_CONFIG }}
-      #    EOF
-      #    rclone copy bin $RCLONE_PACKAGE:$(date +"%Y-%m-%d")/lean --filter-from ../data/rclone/upload-rule.txt
-      #    rclone copy bin/targets $RCLONE_FIRMWARE:$(date +"%Y-%m-%d")/lean --exclude "packages/"
-      #    echo "::warning file=Firmware-GoogleDrive::Download Link: https://drive.google.com/drive/folders/1_P2RoPbguY99qJxmCU4SKUgP8Kg0Xr03"
+     #- name: Rclone Upload
+     #  env:
+     #    RCLONE_PACKAGE: ${{ secrets.RCLONE_PACKAGE }}
+     #    RCLONE_FIRMWARE: ${{ secrets.RCLONE_FIRMWARE }}
+     #  if: env.GENERATE_STATUS == 'success' && env.UPLOAD_RCLONE == 'true' && env.RCLONE_PACKAGE != ''
+     #  run: |
+     #    cd $OPENWRTROOT
+     #    curl https://rclone.org/install.sh | sudo bash
+     #    mkdir -p ~/.config/rclone/
+     #    cat << EOF > ~/.config/rclone/rclone.conf
+     #    ${{ secrets.RCLONE_CONFIG }}
+     #    EOF
+     #    rclone copy bin $RCLONE_PACKAGE:$(date +"%Y-%m-%d")/lean --filter-from ../data/rclone/upload-rule.txt
+     #    rclone copy bin/targets $RCLONE_FIRMWARE:$(date +"%Y-%m-%d")/lean --exclude "packages/"
+     #    echo "::warning file=Firmware-GoogleDrive::Download Link: https://drive.google.com/drive/folders/1_P2RoPbguY99qJxmCU4SKUgP8Kg0Xr03"
 
       - name: Organize Files
         id: organize
@@ -241,12 +241,12 @@ jobs:
           df -hT $PWD
           echo "::set-output name=ORGANIZE_STATUS::success"
 
-     # - name: Upload Firmware To CowTransfer
-     #   if: steps.organize.outputs.ORGANIZE_STATUS == 'success' && env.UPLOAD_COWTRANSFER == 'true'
-     #   run: |
-     #     cd $OPENWRTROOT/bin/targets/$TARGET/
-     #     ./transfer cow --block 2621440 -s -p 64 --no-progress ${FIRMWARE} 2>&1 | tee cowtransfer.log
-     #     echo "::warning file=Firmware-Cowtransfer.com::$(cat cowtransfer.log | grep https)"
+      #- name: Upload Firmware To CowTransfer
+      #  if: steps.organize.outputs.ORGANIZE_STATUS == 'success' && env.UPLOAD_COWTRANSFER == 'true'
+      #  run: |
+      #    cd $OPENWRTROOT/bin/targets/$TARGET/
+      #    ./transfer cow --block 2621440 -s -p 64 --no-progress ${FIRMWARE} 2>&1 | tee cowtransfer.log
+      #    echo "::warning file=Firmware-Cowtransfer.com::$(cat cowtransfer.log | grep https)"
      
       - name: Upload Firmware To Wss
         id: wss

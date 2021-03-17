@@ -166,11 +166,6 @@ pushd po2lmo
 make && sudo make install
 popd
 
-#Replace Board.d
-pushd target/linux/rockchip/armv8/base-files/etc/board.d
-cp -f $GITHUB_WORKSPACE/scripts/02_network 02_network
-popd
-
 # Change default shell to zsh
 sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 

@@ -104,12 +104,12 @@ git clone --depth=1 https://github.com/NateLol/luci-app-oled
 git clone --depth=1 https://github.com/destan19/OpenAppFilter
 popd
 
-#Add luci-app-ddnsto
+# Add luci-app-ddnsto
 pushd package/network/services
 git clone --depth=1 https://github.com/linkease/ddnsto-openwrt
 popd
 
-#Add luci-app-linkease
+# Add luci-app-linkease
 pushd package/network/services
 git clone --depth=1 https://github.com/linkease/linkease-openwrt
 popd
@@ -168,12 +168,3 @@ popd
 
 # Change default shell to zsh
 sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
-
-#R4S 原生网口 & LEDs
-pushd target/linux/rockchip/armv8/base-files/etc
-rm -rf board.d
-svn co https://github.com/openwrt/openwrt/branches/openwrt-21.02/target/linux/rockchip/armv8/base-files/etc/board.d
-popd
-git am $GITHUB_WORKSPACE/data/extra/*.patch
-
-

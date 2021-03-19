@@ -169,3 +169,11 @@ popd
 # Change default shell to zsh
 sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 
+#R4S 原生网口 & LEDs
+pushd target/linux/rockchip/armv8/base-files/etc
+rm -rf board.d
+svn co https://github.com/openwrt/openwrt/trunk/target/linux/rockchip/armv8/base-files/etc/board.d
+popd
+git am $GITHUB_WORKSPACE/data/extra/*.patch
+
+

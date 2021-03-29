@@ -80,9 +80,6 @@ git clone --depth=1 https://github.com/immortalwrt/openwrt-tmate
 # Add subconverter
 git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
 
-# Add gotop
-svn co https://github.com/immortalwrt/packages/trunk/admin/gotop
-
 # Add smartdns
 svn co https://github.com/pymumu/smartdns/trunk/package/openwrt ../smartdns
 svn co https://github.com/immortalwrt/immortalwrt/trunk/package/ntlf9t/luci-app-smartdns ../luci-app-smartdns

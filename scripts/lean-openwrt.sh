@@ -74,9 +74,6 @@ git clone -b 18.06 https://github.com/garypang13/luci-theme-edge
 rm -rf ../lean/luci-theme-infinityfreedom
 git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
 
-# Add tmate
-git clone --depth=1 https://github.com/immortalwrt/openwrt-tmate
-
 # Add subconverter
 git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
 

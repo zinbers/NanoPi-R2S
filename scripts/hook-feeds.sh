@@ -27,10 +27,10 @@ svn co https://github.com/immortalwrt/immortalwrt/trunk/package/kernel/rtl88x2bu
 
 # Add gotop
 svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/admin/gotop packages/admin/gotop
-popd
 
 # Add minieap
 svn co https://github.com/immortalwrt/packages/trunk/net/minieap packages/net/minieap
+popd
 
 # Set to local feeds
 pushd customfeeds/packages

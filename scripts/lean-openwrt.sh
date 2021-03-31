@@ -108,17 +108,6 @@ pushd package/lean
 svn co https://github.com/immortalwrt/immortalwrt/trunk/package/lean/pandownload-fake-server
 popd
 
-# Add driver for rtl8821cu & rtl8812au-ac
-pushd package/lean
-svn co https://github.com/immortalwrt/immortalwrt/trunk/package/kernel/rtl8812au-ac
-svn co https://github.com/immortalwrt/immortalwrt/trunk/package/kernel/rtl8821cu
-popd
-
-# Add rtl88x2bu
-pushd package/lean
-svn co https://github.com/immortalwrt/immortalwrt/trunk/package/kernel/rtl88x2bu
-popd
-
 # Mod zzz-default-settings
 pushd package/lean/default-settings/files
 sed -i '/http/d' zzz-default-settings

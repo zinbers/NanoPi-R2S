@@ -16,9 +16,7 @@ svn co https://github.com/immortalwrt/packages/trunk/net/gowebdav packages/net/g
 svn co https://github.com/immortalwrt/packages/trunk/net/smartdns packages/net/smartdns
 
 # Add tmate
-#git clone --depth=1 https://github.com/immortalwrt/openwrt-tmate
-svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/tmate packages/net/tmate
-svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/libs/msgpack-c packages/libs/msgpack-c
+git clone --depth=1 https://github.com/immortalwrt/openwrt-tmate
 
 # Add driver for rtl8821cu & rtl8812au-ac
 svn co https://github.com/immortalwrt/immortalwrt/trunk/package/kernel/rtl8812au-ac package/kernel/rtl8812au-ac

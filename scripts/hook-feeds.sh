@@ -16,8 +16,7 @@ svn co https://github.com/immortalwrt/packages/trunk/net/gowebdav packages/net/g
 svn co https://github.com/immortalwrt/packages/trunk/net/smartdns packages/net/smartdns
 
 # Add tmate
-svn co https://github.com/immortalwrt/packages/trunk/net/tmate packages/net/tmate
-svn co https://github.com/immortalwrt/packages/trunk/libs/msgpack-c packages/libs/msgpack-c
+git clone --depth=1 https://github.com/immortalwrt/openwrt-tmate
 
 # Add gotop
 svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/admin/gotop packages/admin/gotop

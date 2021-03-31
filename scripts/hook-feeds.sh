@@ -20,6 +20,13 @@ svn co https://github.com/immortalwrt/packages/trunk/net/smartdns packages/net/s
 svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/net/tmate packages/net/tmate
 svn co https://github.com/immortalwrt/packages/branches/openwrt-21.02/libs/msgpack-c packages/libs/msgpack-c
 
+# Add driver for rtl8821cu & rtl8812au-ac
+svn co https://github.com/immortalwrt/immortalwrt/trunk/package/kernel/rtl8812au-ac package/kernel/rtl8812au-ac
+svn co https://github.com/immortalwrt/immortalwrt/trunk/package/kernel/rtl8821cu package/kernel/rtl8821cu
+
+# Add rtl88x2bu
+svn co https://github.com/immortalwrt/immortalwrt/trunk/package/kernel/rtl88x2bu package/kernel/rtl88x2bu
+
 # Add gotop
 svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/admin/gotop packages/admin/gotop
 popd

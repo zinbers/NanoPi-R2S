@@ -74,7 +74,6 @@ git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
 git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
 
 # Add luci-app-smartdns
-svn co https://github.com/immortalwrt/immortalwrt/trunk/package/ntlf9t/luci-app-smartdns ../luci-app-smartdns
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/ntlf9t/luci-app-smartdns
 
 # Add driver for rtl8821cu & rtl8812au-ac

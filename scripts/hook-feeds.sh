@@ -8,14 +8,6 @@
 # Svn checkout packages from immortalwrt's repository
 pushd customfeeds
 
-# Add luci-app-gowebdav
-svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-gowebdav luci/applications/luci-app-gowebdav
-svn co https://github.com/immortalwrt/packages/trunk/net/gowebdav packages/net/gowebdav
-
-# Add smartdns&luci-app-smartdns
-svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-smartdns luci/applications/luci-app-smartdns
-svn co https://github.com/immortalwrt/packages/trunk/net/smartdns packages/net/smartdns
-
 # Add tmate
 git clone --depth=1 https://github.com/immortalwrt/openwrt-tmate
 

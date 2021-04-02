@@ -87,12 +87,6 @@ svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/pa
 # Add luci-udptools
 git clone --depth=1 https://github.com/zcy85611/openwrt-luci-kcp-udp
 
-#Add luci-app-netdata
-rm -rf ../lean/luci-app-netdata
-svn co https://github.com/281677160/openwrt-package/trunk/luci-app-netdata
-rm -rf ../../customfeeds/packages/admin/netdata
-svn co https://github.com/281677160/openwrt-package/trunk/netdata
-
 # Add luci-app-wireguard
 svn co https://github.com/openwrt/luci/trunk/applications/luci-app-wireguard
 

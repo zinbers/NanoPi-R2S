@@ -34,6 +34,12 @@ git clone --depth=1 https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk
 # Add luci-proto-minieap
 git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
 
+# Add luci-app-netdata
+rm -rf ../lean/luci-app-netdata
+svn co https://github.com/281677160/openwrt-package/trunk/luci-app-netdata
+rm -rf ../../customfeeds/packages/admin/netdata
+svn co https://github.com/281677160/openwrt-package/trunk/netdata
+
 # Add luci-app-smartdns & smartdns
 svn co https://github.com/281677160/openwrt-package/trunk/luci-app-smartdns
 svn co https://github.com/281677160/openwrt-package/trunk/smartdns

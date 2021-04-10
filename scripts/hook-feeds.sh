@@ -8,6 +8,12 @@
 # Svn checkout packages from immortalwrt's repository
 pushd customfeeds
 
+# Add luci-app-adguardhome
+svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-adguardhome luci/applications/luci-app-adguardhome
+svn co https://github.com/immortalwrt/packages/trunk/net/adguardhome packages/net/adguardhome
+svn co https://github.com/immortalwrt/packages/trunk/lang/node-yarn packages/lang/node-yarn
+svn co https://github.com/immortalwrt/packages/trunk/devel/packr packages/devel/packr
+
 # Add luci-app-gowebdav
 svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-gowebdav luci/applications/luci-app-gowebdav
 svn co https://github.com/immortalwrt/packages/trunk/net/gowebdav packages/net/gowebdav

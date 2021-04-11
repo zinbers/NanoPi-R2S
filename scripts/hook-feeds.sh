@@ -8,29 +8,18 @@
 # Svn checkout packages from immortalwrt's repository
 pushd customfeeds
 
-# Add luci-app-adguardhome
-svn co https://github.com/immortalwrt/luci/branches/openwrt-18.06/applications/luci-app-adguardhome luci/applications/luci-app-adguardhome
-svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/adguardhome packages/net/adguardhome
-svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/lang/node-yarn packages/lang/node-yarn
-svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/devel/packr packages/devel/packr
-
 # Add luci-app-gowebdav
-svn co https://github.com/immortalwrt/luci/branches/openwrt-18.06/applications/luci-app-gowebdav luci/applications/luci-app-gowebdav
-svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/gowebdav packages/net/gowebdav
-
-# Add luci-app-smartdns
-svn co https://github.com/immortalwrt/luci/branches/openwrt-18.06/applications/luci-app-smartdns luci/applications/luci-app-smartdns
-svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/smartdns packages/net/smartdns
+svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-gowebdav luci/applications/luci-app-gowebdav
+svn co https://github.com/immortalwrt/packages/trunk/net/gowebdav packages/net/gowebdav
 
 # Add tmate
-svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/tmate packages/net/tmate
-svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/libs/msgpack-c packages/libs/msgpack-c
+git clone --depth=1 https://github.com/immortalwrt/openwrt-tmate
 
 # Add gotop
 svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/admin/gotop packages/admin/gotop
 
 # Add minieap
-svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/minieap packages/net/minieap
+svn co https://github.com/immortalwrt/packages/trunk/net/minieap packages/net/minieap
 popd
 
 # Set to local feeds

@@ -14,6 +14,9 @@ svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/adguar
 svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/lang/node-yarn packages/lang/node-yarn
 svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/devel/packr packages/devel/packr
 
+# Add libfido2
+svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/libs/libfido2 packages/libs/libfido2
+
 # Add luci-app-gowebdav
 svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-gowebdav luci/applications/luci-app-gowebdav
 svn co https://github.com/immortalwrt/packages/trunk/net/gowebdav packages/net/gowebdav

@@ -19,6 +19,7 @@ pushd package/community
 
 # Add Lienol's Packages
 git clone --depth=1 https://github.com/Lienol/openwrt-package
+rm -rf ../lean/luci-app-kodexplorer
 
 # Add luci-app-passwall
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
@@ -146,6 +147,12 @@ popd
 # Fix mt76 wireless driver
 pushd package/kernel/mt76
 sed -i '/mt7662u_rom_patch.bin/a\\techo mt76-usb disable_usb_sg=1 > $\(1\)\/etc\/modules.d\/mt76-usb' Makefile
+popd
+
+# Add R2S GPU 驱动
+pushd package/kernel/linux/modules
+rm -rf video.mk
+wget -P https://github.com/immortalwrt/immortalwrt/raw/master/package/kernel/linux/modules/video.mk
 popd
 
 # Add po2lmo

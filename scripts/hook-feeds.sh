@@ -25,7 +25,7 @@ git clone --depth=1 https://github.com/immortalwrt/openwrt-tmate
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall luci/applications/openwrt-passwall
 
 # Add luci-app-ssrp
-git clone --depth=1 https://github.com/fw876/helloworld
+git clone --depth=1 https://github.com/fw876/helloworld luci/applications/helloworld
 
 # Add gotop
 svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/admin/gotop packages/admin/gotop

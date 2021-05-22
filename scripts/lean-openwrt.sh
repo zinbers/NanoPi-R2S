@@ -47,16 +47,6 @@ git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
 #svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome
 #svn co https://github.com/Lienol/openwrt/trunk/package/diy/adguardhome
 
-# Add luci-app-netdata
-rm -rf ../lean/luci-app-netdata
-svn co https://github.com/281677160/openwrt-package/trunk/luci-app-netdata
-rm -rf ../../customfeeds/packages/admin/netdata
-svn co https://github.com/281677160/openwrt-package/trunk/netdata
-
-# Add luci-app-smartdns & smartdns
-svn co https://github.com/281677160/openwrt-package/trunk/luci-app-smartdns
-svn co https://github.com/281677160/openwrt-package/trunk/smartdns
-
 # Add luci-app-diskman
 git clone --depth=1 https://github.com/SuLingGG/luci-app-diskman
 mkdir parted

@@ -90,7 +90,7 @@ svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/pa
 # Add luci-udptools
 svn co https://github.com/zcy85611/Openwrt-Package/trunk/luci-udptools
 svn co https://github.com/zcy85611/Openwrt-Package/trunk/udp2raw
-svn co https://github.com/zcy85611/Openwrt-Package/trunk/udpspeeder-tunnel
+svn co https://github.com/zcy85611/Openwrt-Package/trunk/udpspeeder
 
 # Add luci-app-oled (R2S Only)
 git clone --depth=1 https://github.com/NateLol/luci-app-oled
